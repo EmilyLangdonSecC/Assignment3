@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Capitals Quiz</title>
+</head>
+
+<body>
+    <main>
+        <div class="authentication card shown">
+            <h2 class="subtitle">Speak friend and enter:</h2>
+            <form class="auth-form">
+                <input id="usernameField" class="input-field" placeholder="Username" maxlength="15">
+                <input id="passwordField" class="input-field" placeholder="Password" type="password" maxlength="15">
+                <input id="submitButton" class="input-field submit" value="Submit" type="submit">
+            </form>
+        </div>
+        <div class="start card hidden">
+            <h1 class="title">Capitals Quiz</h1>
+            <img class="image" src="london.jpg">
+            <h2 class="subtitle">Choose number of questions:</h2>
+            <div class="question-numbers subtitle">
+                <div id="questions-5" class="question-amount answer">5</div>
+                <div id="questions-10" class="question-amount answer">10</div>
+                <div id="questions-20" class="question-amount answer">20</div>
+            </div>
+        </div>
+        <div class="question card hidden">
+            <h2 class="subtitle">Question <span id="current-question-number">0</span>/<span
+                    id="total-questions">0</span></h2>
+            <form class="current-answers">
+                <h1 id="current-question" class="subtitle">Question Filler Text</h1>
+                <input type="button" id="current-answer-1" class="answer subtitle" value="Answer 1">
+                <input type="button" id="current-answer-2" class="answer subtitle" value="Answer 2">
+                <input type="button" id="current-answer-3" class="answer subtitle" value="Answer 3">
+                <input type="button" id="current-answer-4" class="answer subtitle" value="Answer 4">
+            </form>
+            <div class="next-question subtitle hidden">Next Question</div>
+            <div class="end-quiz subtitle hidden">End Quiz</div>
+        </div>
+        <div class="end card hidden">
+            <h2 class="subtitle">Congratulations!</h2>
+            <h2 class="subtitle">You completed the Capitals Quiz!</h2>
+            <img class="image" src="celebrate.jpg">
+            <br>
+            <h2 class="subtitle">Your score is <span id="final-score">0</span>/<span
+                id="total-questions-end">0</span></h2>
+            <div class="play-again subtitle">Play Again</div>
+        </div>
+    </main>
+</body>
+
+</html>
